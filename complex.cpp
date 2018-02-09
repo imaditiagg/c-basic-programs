@@ -29,13 +29,13 @@ class complex
 			temp.img=img-c.img;
 			return temp;
 		}
-		complex operator*(complex c)
-		{
-			complex temp(0,0);
-			temp.real=real*c.real;
-			temp.img=img*c.img;
-			return temp;
-		}
+		complex operator*(complex c)  
+        {  
+        complex temp(0,0);  
+        temp.real=(real*c.real)-(img*c.img);  
+        temp.img=(real*c.img)+(img*c.real);  
+        return temp;  
+        }  
 };
 int main()
 {
